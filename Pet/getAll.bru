@@ -1,0 +1,23 @@
+meta {
+  name: getAll
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/pets?species=dog&species=cat&age=0&gender=female
+  body: none
+  auth: inherit
+}
+
+params:query {
+  species: dog
+  species: cat
+  age: 0
+  gender: female
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

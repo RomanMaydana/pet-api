@@ -1,0 +1,504 @@
+[
+  {
+    "id": "PET-001",
+    "name": "Max",
+    "species": "dog",
+    "breed": "Golden Retriever",
+    "age": 2,
+    "age_unit": "years",
+    "size": "Large",
+    "color": "Golden",
+    "gender": "Male",
+    "description": "Very energetic and loves playing fetch in the park.",
+    "images": [
+      "https://images.unsplash.com/photo-1552053831-71594a27632d",
+      "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "High",
+      "vaccinated": false,
+      "neutered": true
+    },
+    "location": "Seattle, WA",
+    "created_at": "2025-12-01T12:00:00.000Z"
+  },
+  {
+    "id": "PET-002",
+    "name": "Thumper",
+    "species": "rabbit",
+    "breed": "Holland Lop",
+    "age": 8,
+    "age_unit": "months",
+    "size": "Small",
+    "color": "White and Brown",
+    "gender": "Female",
+    "description": "Sweet house rabbit, litter-box trained and loves kale.",
+    "images": [
+      "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308",
+      "https://images.unsplash.com/photo-1518717758536-85ae29035b6d"
+    ],
+    "categories": {
+      "urgent": true,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "Medium",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "Portland, OR",
+    "created_at": "2025-11-26T12:00:00.000Z"
+  },
+  {
+    "id": "PET-003",
+    "name": "Oliver",
+    "species": "cat",
+    "breed": "Maine Coon",
+    "age": 4,
+    "age_unit": "years",
+    "size": "Large",
+    "color": "Orange",
+    "gender": "Male",
+    "description": "A gentle giant. Very relaxed and great with kids.",
+    "images": [
+      "https://images.unsplash.com/photo-1533738363-b7f9aef128ce"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "Low",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "Boston, MA",
+    "created_at": "2025-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "PET-004",
+    "name": "Pip",
+    "species": "bird",
+    "breed": "Budgie",
+    "age": 1,
+    "age_unit": "years",
+    "size": "Extra Small",
+    "color": "Blue and White",
+    "gender": "Male",
+    "description": "Cheerful singer who loves to interact with people.",
+    "images": [
+      "https://images.unsplash.com/photo-1552728089-57bdde30ebd3"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": false,
+      "energy_level": "Medium",
+      "vaccinated": false,
+      "neutered": false
+    },
+    "location": "Denver, CO",
+    "created_at": "2025-11-16T12:00:00.000Z"
+  },
+  {
+    "id": "PET-005",
+    "name": "Gizmo",
+    "species": "other",
+    "breed": "Abyssinian",
+    "age": 6,
+    "age_unit": "months",
+    "size": "Small",
+    "color": "Tri-color",
+    "gender": "Male",
+    "description": "Makes happy squeaking noises when he sees carrots.",
+    "images": [
+      "https://images.unsplash.com/photo-1533423714532-61019036c61f"
+    ],
+    "categories": {
+      "urgent": true,
+      "friendly": true,
+      "trained": false,
+      "energy_level": "Low",
+      "vaccinated": false,
+      "neutered": false
+    },
+    "location": "Austin, TX",
+    "created_at": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "PET-006",
+    "name": "Luna",
+    "species": "dog",
+    "breed": "Husky Mix",
+    "age": 3,
+    "age_unit": "years",
+    "size": "Large",
+    "color": "Grey and White",
+    "gender": "Female",
+    "description": "Intelligent and vocal. Needs an active owner.",
+    "images": [
+      "https://images.unsplash.com/photo-1568572933382-74d440d42117"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "High",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "Chicago, IL",
+    "created_at": "2025-11-06T12:00:00.000Z"
+  },
+  {
+    "id": "PET-007",
+    "name": "Nibbles",
+    "species": "other",
+    "breed": "Syrian",
+    "age": 4,
+    "age_unit": "months",
+    "size": "Extra Small",
+    "color": "Cream",
+    "gender": "Female",
+    "description": "Enjoys running on her wheel at night.",
+    "images": [
+      "https://images.unsplash.com/photo-1548623963-8d070624003a"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": false,
+      "trained": false,
+      "energy_level": "High",
+      "vaccinated": false,
+      "neutered": false
+    },
+    "location": "San Diego, CA",
+    "created_at": "2025-11-01T12:00:00.000Z"
+  },
+  {
+    "id": "PET-008",
+    "name": "Shadow",
+    "species": "cat",
+    "breed": "Black Domestic",
+    "age": 5,
+    "age_unit": "years",
+    "size": "Medium",
+    "color": "Black",
+    "gender": "Male",
+    "description": "Quiet lap cat seeking a calm home environment.",
+    "images": [
+      "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "Low",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "Phoenix, AZ",
+    "created_at": "2025-10-27T12:00:00.000Z"
+  },
+  {
+    "id": "PET-009",
+    "name": "Duke",
+    "species": "dog",
+    "breed": "Boxer",
+    "age": 6,
+    "age_unit": "years",
+    "size": "Large",
+    "color": "Fawn",
+    "gender": "Male",
+    "description": "Playful senior who still thinks he is a puppy.",
+    "images": [
+      "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc"
+    ],
+    "categories": {
+      "urgent": true,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "Medium",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "Atlanta, GA",
+    "created_at": "2025-10-22T12:00:00.000Z"
+  },
+  {
+    "id": "PET-010",
+    "name": "Sunny",
+    "species": "bird",
+    "breed": "Cockatiel",
+    "age": 2,
+    "age_unit": "years",
+    "size": "Small",
+    "color": "Yellow",
+    "gender": "Female",
+    "description": "Loves to whistle popular tunes and sit on shoulders.",
+    "images": [
+      "https://images.unsplash.com/photo-1452570053594-1b985d6ea890"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "Medium",
+      "vaccinated": false,
+      "neutered": false
+    },
+    "location": "Miami, FL",
+    "created_at": "2025-10-17T12:00:00.000Z"
+  },
+  {
+    "id": "PET-011",
+    "name": "Rex",
+    "species": "dog",
+    "breed": "German Shepherd",
+    "age": 4,
+    "age_unit": "years",
+    "size": "Large",
+    "color": "Black and Tan",
+    "gender": "Male",
+    "description": "Loyal guardian, best suited for a house with a yard.",
+    "images": [
+      "https://images.unsplash.com/photo-1589944191468-45c0ffe74394"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": false,
+      "trained": true,
+      "energy_level": "High",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "Dallas, TX",
+    "created_at": "2025-10-12T12:00:00.000Z"
+  },
+  {
+    "id": "PET-012",
+    "name": "Snowball",
+    "species": "rabbit",
+    "breed": "Angora",
+    "age": 1,
+    "age_unit": "years",
+    "size": "Medium",
+    "color": "White",
+    "gender": "Male",
+    "description": "Fluffy companion who requires regular grooming.",
+    "images": [
+      "https://images.unsplash.com/photo-1591333119274-583bab62ccbc"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": false,
+      "energy_level": "Low",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "San Francisco, CA",
+    "created_at": "2025-10-07T12:00:00.000Z"
+  },
+  {
+    "id": "PET-013",
+    "name": "Mittens",
+    "species": "cat",
+    "breed": "Calico",
+    "age": 2,
+    "age_unit": "years",
+    "size": "Medium",
+    "color": "Tri-color",
+    "gender": "Female",
+    "description": "Spunky and independent. Excellent mouse hunter.",
+    "images": [
+      "https://images.unsplash.com/photo-1543852786-1cf6624b9987"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "Medium",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "New York, NY",
+    "created_at": "2025-10-02T12:00:00.000Z"
+  },
+  {
+    "id": "PET-014",
+    "name": "Peanut",
+    "species": "other",
+    "breed": "American",
+    "age": 10,
+    "age_unit": "months",
+    "size": "Small",
+    "color": "Brown",
+    "gender": "Female",
+    "description": "Very vocal when it is breakfast time.",
+    "images": [
+      "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": false,
+      "energy_level": "Low",
+      "vaccinated": false,
+      "neutered": false
+    },
+    "location": "Nashville, TN",
+    "created_at": "2025-09-27T12:00:00.000Z"
+  },
+  {
+    "id": "PET-015",
+    "name": "Toby",
+    "species": "dog",
+    "breed": "Beagle",
+    "age": 5,
+    "age_unit": "months",
+    "size": "Medium",
+    "color": "Tricolor",
+    "gender": "Male",
+    "description": "Puppy with a lot of energy and a great nose.",
+    "images": [
+      "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8"
+    ],
+    "categories": {
+      "urgent": true,
+      "friendly": true,
+      "trained": false,
+      "energy_level": "Very High",
+      "vaccinated": true,
+      "neutered": false
+    },
+    "location": "Orlando, FL",
+    "created_at": "2025-09-22T12:00:00.000Z"
+  },
+  {
+    "id": "PET-016",
+    "name": "Whiskers",
+    "species": "cat",
+    "breed": "Siamese",
+    "age": 3,
+    "age_unit": "years",
+    "size": "Medium",
+    "color": "Pointed",
+    "gender": "Male",
+    "description": "Talkative cat who wants to be the center of attention.",
+    "images": [
+      "https://images.unsplash.com/photo-1513245543132-31f507417b26"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "Medium",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "Las Vegas, NV",
+    "created_at": "2025-09-17T12:00:00.000Z"
+  },
+  {
+    "id": "PET-017",
+    "name": "Sky",
+    "species": "bird",
+    "breed": "Parakeet",
+    "age": 1,
+    "age_unit": "years",
+    "size": "Extra Small",
+    "color": "Green",
+    "gender": "Female",
+    "description": "Enjoys hanging out on her swing and eating seeds.",
+    "images": [
+      "https://images.unsplash.com/photo-1522850949506-585b584877fe"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": false,
+      "energy_level": "High",
+      "vaccinated": false,
+      "neutered": false
+    },
+    "location": "Philadelphia, PA",
+    "created_at": "2025-09-12T12:00:00.000Z"
+  },
+  {
+    "id": "PET-018",
+    "name": "Buster",
+    "species": "dog",
+    "breed": "Bulldog Mix",
+    "age": 7,
+    "age_unit": "years",
+    "size": "Medium",
+    "color": "Tan and White",
+    "gender": "Male",
+    "description": "Loves naps and short walks. Perfect for an apartment.",
+    "images": [
+      "https://images.unsplash.com/photo-1517849845537-4d257902454a"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": true,
+      "trained": true,
+      "energy_level": "Low",
+      "vaccinated": false,
+      "neutered": true
+    },
+    "location": "Houston, TX",
+    "created_at": "2025-09-07T12:00:00.000Z"
+  },
+  {
+    "id": "PET-019",
+    "name": "Cleo",
+    "species": "cat",
+    "breed": "Russian Blue",
+    "age": 2,
+    "age_unit": "years",
+    "size": "Medium",
+    "color": "Grey",
+    "gender": "Female",
+    "description": "Elegant and shy cat looking for a patient owner.",
+    "images": [
+      "https://images.unsplash.com/photo-1574158622682-e40e69881006"
+    ],
+    "categories": {
+      "urgent": false,
+      "friendly": false,
+      "trained": true,
+      "energy_level": "Low",
+      "vaccinated": true,
+      "neutered": true
+    },
+    "location": "Seattle, WA",
+    "created_at": "2025-09-02T12:00:00.000Z"
+  },
+  {
+    "id": "PET-020",
+    "name": "Zippy",
+    "species": "other",
+    "breed": "Roborovski",
+    "age": 2,
+    "age_unit": "months",
+    "size": "Extra Small",
+    "color": "Sandy",
+    "gender": "Male",
+    "description": "Extremely fast and tiny. Fun to watch.",
+    "images": [
+      "https://images.unsplash.com/photo-1544211157-e6f4a86b360b"
+    ],
+    "categories": {
+      "urgent": true,
+      "friendly": false,
+      "trained": false,
+      "energy_level": "Extreme",
+      "vaccinated": false,
+      "neutered": false
+    },
+    "location": "Denver, CO",
+    "created_at": "2025-08-28T12:00:00.000Z"
+  }
+]
