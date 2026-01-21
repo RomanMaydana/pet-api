@@ -1,5 +1,5 @@
 import { validatePartialFilters } from '../schemas/filters.js'
-import { validatePet } from '../schemas/pet.js'
+import { validatePartialPet, validatePet } from '../schemas/pet.js'
 import { getFieldErrors } from '../utils.js'
 
 export class PetsController {
@@ -37,11 +37,20 @@ export class PetsController {
     res.json(pet)
   }
 
-  async update ({ id, input }) {
-    return {}
+  update = async (req, res) => {
+    const { id } = req.params
+    const result = validatePartialPet(req.body)
+    if (!result.success) {
+      return res.status(400).json({ message: getFieldErrors(result.error) })
+    }
+    const updatePet = await this.petsModel.update({ id, input: result.data })
+    if (!updatePet) {
+      return res.status(400).json({ message: 'Pet not updated' })
+    }
+    res.json(updatePet)
   }
 
-  async delete () {
+  delete = async () => {
     return {}
   }
 }

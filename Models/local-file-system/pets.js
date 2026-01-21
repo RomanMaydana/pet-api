@@ -41,7 +41,12 @@ export class PetsModel {
   }
 
   static async update ({ id, input }) {
-    return {}
+    const petIndex = pets.findIndex(pet => pet.id === id)
+    if (petIndex === -1) {
+      return null
+    }
+    pets[petIndex] = { ...pets[petIndex], ...input }
+    return pets[petIndex]
   }
 
   static async delete ({ id }) {

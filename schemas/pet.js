@@ -58,3 +58,7 @@ const petSchema = z.object({
 export function validatePet (input) {
   return petSchema.safeParse(input)
 }
+
+export function validatePartialPet (input) {
+  return petSchema.partial().safeParse(input)
+}
