@@ -1,0 +1,43 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/pets
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "Pedro",
+      "species": "dog",
+      "breed": "Golden Retriever",
+      "age": 2,
+      "age_unit": "years",
+      "size": "Large",
+      "color": "Golden",
+      "gender": "Male",
+      "description": "Very energetic and loves playing fetch in the park.",
+      "images": [
+        "https://images.unsplash.com/photo-1552053831-71594a27632d",
+        "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e"
+      ],
+      "categories": {
+        "urgent": false,
+        "friendly": true,
+        "trained": true,
+        "energy_level": "High",
+        "vaccinated": false,
+        "neutered": true
+      },
+      "location": "Seattle, WA",
+    },
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,7 +1,7 @@
 import express from 'express'
 import { corsMiddleware } from './middlewares/cors.js'
 import { createPetsRouter } from './routes/pets.js'
-import { PetsModel } from './Models/local-file-system/pets.js'
+import { PetsModel } from './models/local-file-system/pets.js'
 
 const app = express()
 

@@ -1,4 +1,5 @@
 import pets from '../../pets.json' with { type: 'json' }
+import crypto from 'node:crypto'
 import { AgeUnit, PetAges } from '../../type.d.js'
 export class PetsModel {
   static async getAll ({ species, age, gender, actions }) {
@@ -25,11 +26,18 @@ export class PetsModel {
   }
 
   static async getById ({ id }) {
-    return {}
+    return pets.find(pet => pet.id === id)
   }
 
   static async create ({ input }) {
-    return {}
+    const uuid = crypto.randomUUID()
+    const newPet = {
+      id: uuid,
+      ...input,
+      created_at: new Date().toISOString()
+    }
+    pets.push(newPet)
+    return newPet
   }
 
   static async update ({ id, input }) {
