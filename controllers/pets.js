@@ -45,12 +45,17 @@ export class PetsController {
     }
     const updatePet = await this.petsModel.update({ id, input: result.data })
     if (!updatePet) {
-      return res.status(400).json({ message: 'Pet not updated' })
+      return res.status(404).json({ message: 'Pet not found' })
     }
     res.json(updatePet)
   }
 
-  delete = async () => {
-    return {}
+  delete = async (req, res) => {
+    const { id } = req.params
+    const result = await this.petsModel.delete({ id })
+    if (!result) {
+      return res.status(404).json({ message: 'Pet not found' })
+    }
+    res.json({ message: 'Pet deleted' })
   }
 }

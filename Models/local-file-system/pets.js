@@ -50,6 +50,11 @@ export class PetsModel {
   }
 
   static async delete ({ id }) {
-    return {}
+    const petIndex = pets.findIndex(pet => pet.id === id)
+    if (petIndex === -1) {
+      return null
+    }
+    pets.splice(petIndex, 1)
+    return true
   }
 }
