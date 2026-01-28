@@ -1,8 +1,9 @@
 import pets from '../../pets.json' with { type: 'json' }
 import crypto from 'node:crypto'
 import { AgeUnit, PetAges } from '../../type.d.js'
+import { DEFAULTS } from '../../config.js'
 export class PetsModel {
-  static async getAll ({ species, age, gender, actions }) {
+  static async getAll ({ text, species, age, gender, actions, sortBy, offset= DEFAULTS.LIMIT_OFFSET, limit = DEFAULTS.LIMIT_PAGE }) {
     let filteredPets = [...pets]
     if(species) {
       filteredPets = filteredPets.filter(pet => species.includes(pet.species))
@@ -22,7 +23,22 @@ export class PetsModel {
     if(actions){
       filteredPets = filteredPets.filter(pet => pet.categories[actions])
     }
-    return filteredPets
+    if(text){
+      filteredPets = filteredPets.filter(pet => pet.name.toLowerCase().includes(text))
+    }
+    if(sortBy === 'oldest') {
+      filteredPets.sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
+    } else {
+      filteredPets.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+    }
+    const offsetNumber = Number(offset)
+    const limitNumber = Number(limit)
+    return {
+      data: filteredPets.slice(offsetNumber, offsetNumber + limitNumber),
+      total: filteredPets.length,
+      offset: offsetNumber,
+      limit: limitNumber
+    }
   }
 
   static async getById ({ id }) {

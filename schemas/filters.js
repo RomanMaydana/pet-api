@@ -15,7 +15,23 @@ const filtersSchema = z.object({
     if (typeof val === 'string') return val.toLowerCase()
     return val
   }, z.enum(['male', 'female'])),
-  actions: z.enum(['urgent', 'vaccinated'])
+  actions: z.enum(['urgent', 'vaccinated']),
+  text: z.string().toLowerCase(),
+  sortBy: z.enum(['latest', 'oldest']).optional(),
+  offset: z
+    .string()
+    .transform((val) => parseInt(val, 10))
+    .pipe(
+      z.number().int().min(0)
+    )
+    .optional(),
+  limit: z
+    .string()
+    .transform((val) => parseInt(val, 10))
+    .pipe(
+      z.number().int().min(1)
+    )
+    .optional()
 })
 
 export function validatePartialFilters (object) {

@@ -1,5 +1,4 @@
 import { validatePartialFilters } from '../schemas/filters.js'
-import { validatePartialPet, validatePet } from '../schemas/pet.js'
 import { getFieldErrors } from '../utils.js'
 
 export class PetsController {
@@ -26,11 +25,7 @@ export class PetsController {
   }
 
   create = async (req, res) => {
-    const result = validatePet(req.body)
-    if (!result.success) {
-      return res.status(400).json({ message: getFieldErrors(result.error) })
-    }
-    const pet = await this.petsModel.create({ input: result.data })
+    const pet = await this.petsModel.create({ input: req.body })
     if (!pet) {
       return res.status(400).json({ message: 'Pet not created' })
     }
@@ -39,11 +34,7 @@ export class PetsController {
 
   update = async (req, res) => {
     const { id } = req.params
-    const result = validatePartialPet(req.body)
-    if (!result.success) {
-      return res.status(400).json({ message: getFieldErrors(result.error) })
-    }
-    const updatePet = await this.petsModel.update({ id, input: result.data })
+    const updatePet = await this.petsModel.update({ id, input: req.body })
     if (!updatePet) {
       return res.status(404).json({ message: 'Pet not found' })
     }
