@@ -1,34 +1,13 @@
 import { PetsController } from '../controllers/pets.js'
 import { Router } from 'express'
-import { validatePartialPet, validatePet } from '../schemas/pet.js'
-import { getFieldErrors } from '../utils.js'
+import { validateCreate, validateFilters, validateUpdate } from '../middlewares/pets.js'
 // import { ACCEPTED_ORIGINS } from '../middlewares/cors.js'
 
 export const createPetsRouter = ({ petsModel }) => {
   const petsController = new PetsController({ petsModel })
   const router = Router()
 
-  function validateCreate (req, res, next) {
-    const result = validatePet(req.body)
-    if (!result.success) {
-      return res.status(400)
-        .json({ error: 'Invalid request', message: getFieldErrors(result.error) })
-    }
-    req.body = result.data
-    next()
-  }
-
-  function validateUpdate (req, res, next) {
-    const result = validatePartialPet(req.body)
-    if (!result.success) {
-      return res.status(400)
-        .json({ error: 'Invalid request', message: getFieldErrors(result.error) })
-    }
-    req.body = result.data
-    next()
-  }
-
-  router.get('/', petsController.getAll)
+  router.get('/', validateFilters, petsController.getAll)
   router.get('/:id', petsController.getById)
   router.post('/', validateCreate, petsController.create)
   router.put('/:id', validateUpdate, petsController.update)
