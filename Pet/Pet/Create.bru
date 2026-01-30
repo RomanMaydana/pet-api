@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://localhost:3000/pets
+  url: http://localhost:4000/pets
   body: json
   auth: inherit
 }
@@ -25,14 +25,12 @@ body:json {
         "https://images.unsplash.com/photo-1552053831-71594a27632d",
         "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e"
       ],
-      "categories": {
-        "urgent": false,
-        "friendly": true,
-        "trained": true,
+        "is_urgent": false,
+        "is_friendly": true,
+        "is_trained": true,
         "energy_level": "high",
-        "vaccinated": false,
-        "neutered": true
-      },
+        "is_vaccinated": false,
+        "is_neutered": true,
       "location": "Seattle, WA"
   }
 }

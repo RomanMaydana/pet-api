@@ -24,12 +24,13 @@ export class PetsController {
     res.json(pet)
   }
 
-  create = async (req, res) => {
-    const pet = await this.petsModel.create({ input: req.body })
-    if (!pet) {
-      return res.status(400).json({ message: 'Pet not created' })
+  create = async (req, res, next) => {
+    try {
+      const pet = await this.petsModel.create({ input: req.body })
+      res.json(pet)
+    } catch (error) {
+      next(error)
     }
-    res.json(pet)
   }
 
   update = async (req, res) => {

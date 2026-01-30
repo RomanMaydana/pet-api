@@ -1,6 +1,6 @@
-import { validatePartialFilters } from '../schemas/filters'
-import { validatePartialPet, validatePet } from '../schemas/pet'
-import { getFieldErrors } from '../utils'
+import { validatePartialFilters } from '../schemas/filters.js'
+import { validatePartialPet, validatePet } from '../schemas/pet.js'
+import { getFieldErrors } from '../utils.js'
 
 export function validateCreate (req, res, next) {
   const result = validatePet(req.body)
@@ -28,6 +28,6 @@ export function validateFilters (req, res, next) {
     return res.status(400)
       .json({ error: 'Invalid request', message: getFieldErrors(result.error) })
   }
-  req.query = result.data
+  req.body = result.data
   next()
 }

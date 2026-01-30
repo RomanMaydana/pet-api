@@ -1,4 +1,5 @@
 import z from 'zod'
+import { DEFAULTS } from '../config.js'
 
 const filtersSchema = z.object({
   species: z
@@ -24,6 +25,7 @@ const filtersSchema = z.object({
     .pipe(
       z.number().int().min(0)
     )
+    .default(DEFAULTS.LIMIT_OFFSET)
     .optional(),
   limit: z
     .string()
@@ -31,6 +33,7 @@ const filtersSchema = z.object({
     .pipe(
       z.number().int().min(1)
     )
+    .default(DEFAULTS.LIMIT_PAGE)
     .optional()
 })
 
